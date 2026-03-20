@@ -1,0 +1,5 @@
+{
+  "name": "Track & Trend",
+  "description": "AI-powered fashion scan and shop experience for performance aesthetics.",
+  "requestFramePermissions": ["camera"]
+}

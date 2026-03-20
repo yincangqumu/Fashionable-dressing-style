@@ -1,0 +1,78 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&family=Manrope:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-headline: "Lexend", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+
+  --color-surface-tint: #506300;
+  --color-background: #f6f6f6;
+  --color-surface-container-low: #f0f1f1;
+  --color-on-tertiary-container: #5d4f00;
+  --color-inverse-surface: #0c0f0f;
+  --color-tertiary-container: #fedf46;
+  --color-tertiary-dim: #5d4f00;
+  --color-primary-fixed: #cffc00;
+  --color-secondary-container: #e5e2e1;
+  --color-inverse-on-surface: #9c9d9d;
+  --color-surface-container-high: #e1e3e3;
+  --color-secondary-fixed-dim: #d6d4d3;
+  --color-on-primary-container: #4b5e00;
+  --color-secondary: #5c5b5b;
+  --color-primary-fixed-dim: #c2ed00;
+  --color-on-primary: #e2ff81;
+  --color-surface-dim: #d3d5d5;
+  --color-primary-container: #cffc00;
+  --color-outline: #767777;
+  --color-on-primary-fixed-variant: #546800;
+  --color-surface-container-highest: #dbdddd;
+  --color-on-secondary-container: #525151;
+  --color-surface: #f6f6f6;
+  --color-on-secondary-fixed-variant: #5c5b5b;
+  --color-tertiary: #6b5b00;
+  --color-secondary-fixed: #e5e2e1;
+  --color-error-dim: #b92902;
+  --color-surface-container: #e7e8e8;
+  --color-on-background: #2d2f2f;
+  --color-on-tertiary: #fff3c8;
+  --color-inverse-primary: #cffc00;
+  --color-surface-variant: #dbdddd;
+  --color-primary: #506300;
+  --color-outline-variant: #acadad;
+  --color-surface-bright: #f6f6f6;
+  --color-on-primary-fixed: #3b4a00;
+  --color-on-secondary: #f5f2f1;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-tertiary-fixed: #483d00;
+  --color-tertiary-fixed-dim: #efd138;
+  --color-on-error-container: #520c00;
+  --color-primary-dim: #455600;
+  --color-on-surface: #2d2f2f;
+  --color-error-container: #f95630;
+  --color-secondary-dim: #504f4f;
+  --color-error: #b02500;
+  --color-on-surface-variant: #5a5c5c;
+  --color-on-tertiary-fixed-variant: #685900;
+  --color-tertiary-fixed: #fedf46;
+  --color-on-error: #ffefec;
+  --color-on-secondary-fixed: #403f3f;
+}
+
+@layer utilities {
+  .scanned-image-container {
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+body {
+  @apply bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container;
+  min-height: 100dvh;
+}
